@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<div class="container my-4">
+    <!-- Hero Section -->
+    <div class="p-5 mb-4 bg-primary text-white rounded-3 shadow">
+        <div class="container-fluid py-3">
+            <h1 class="display-4 fw-bold">Student Management System</h1>
+            <p class="col-md-8 fs-4 mt-3">
+                Manage student enrollments, profiles, and academic records efficiently through a centralized system.
+            </p>
+            <div class="mt-4">
+                @Html.ActionLink("View Students List", "Index", "Student", null, new { @class = "btn btn-light btn-lg me-2 fw-bold text-primary" })
+                @Html.ActionLink("Add New Student", "Create", "Student", null, new { @class = "btn btn-outline-light btn-lg" })
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row g-4 py-3">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h4 class="card-title text-primary fw-bold">📋 Student Records</h4>
+                    <p class="card-text text-muted mt-2">
+                        Easily browse, search, and view comprehensive information for all registered students.
+                    </p>
+                    @Html.ActionLink("Manage Records →", "Index", "Student", null, new { @class = "btn btn-sm btn-outline-primary mt-2" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h4 class="card-title text-success fw-bold">➕ Quick Registration</h4>
+                    <p class="card-text text-muted mt-2">
+                        Add new student profiles with details like name, email, contact, department, and semester.
+                    </p>
+                    @Html.ActionLink("Register Student →", "Create", "Student", null, new { @class = "btn btn-sm btn-outline-success mt-2" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h4 class="card-title text-warning fw-bold">✏️ Update & Manage</h4>
+                    <p class="card-text text-muted mt-2">
+                        Update existing information or remove outdated records seamlessly in real-time.
+                    </p>
+                    @Html.ActionLink("Learn More →", "About", "Home", null, new { @class = "btn btn-sm btn-outline-warning mt-2" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
